@@ -1,0 +1,118 @@
+### Lister tous les livres
+GET http://localhost:8080/api/livres
+
+### Récupérer le livre avec l'ID 1
+GET http://localhost:8080/api/livres/1
+
+### Créer un livre
+POST http://localhost:8080/api/livres
+Content-Type: application/json
+
+{
+  "titre": "Harry Potter",
+  "isbn": "978-2-07-054127-4",
+  "categorie": "ROMAN"
+}
+
+### Modifier un livre
+PUT http://localhost:8080/api/livres/1
+Content-Type: application/json
+
+{
+  "titre": "Le Seigneur des Anneaux (édition collector)",
+  "isbn": "978-2-07-061190-3",
+  "categorie": "ROMAN"
+}
+
+### Supprimer un livre
+DELETE http://localhost:8080/api/livres/1
+
+### Rechercher par titre
+GET http://localhost:8080/api/livres/search?titre=harry
+
+### Filtrer par catégorie
+GET http://localhost:8080/api/livres/categorie/MANGA
+
+
+
+
+### Instancier un auteur.
+GET http://localhost:8080/api/auteurs
+
+## Créer un auteur.
+POST http://localhost:8080/api/auteurs
+Content-Type: application/json
+
+{
+  "nom": "Jean",
+  "prenom": "Paul"
+}
+
+
+
+
+# Création de plusieurs utilisateurs
+
+### Utilisateur 1
+POST http://localhost:8080/api/utilisateurs
+Content-Type: application/json
+
+{
+  "nom": "Dupont",
+  "prenom": "Jean"
+}
+
+### Utilisateur 2
+POST http://localhost:8080/api/utilisateurs
+Content-Type: application/json
+
+{
+  "nom": "Jordan",
+  "prenom": "Lumdupen"
+}
+
+### Utilisateur 3
+POST http://localhost:8080/api/utilisateurs
+Content-Type: application/json
+
+{
+  "nom": "Kevin",
+  "prenom": "Alfes"
+}
+
+### Lister tous les utilisateurs
+GET http://localhost:8080/api/utilisateurs
+
+### Récupérer un utilisateur par ID
+GET http://localhost:8080/api/utilisateurs/1
+
+### Modifier un utilisateur
+PUT http://localhost:8080/api/utilisateurs/1
+Content-Type: application/json
+
+{
+  "nom": "Dupont",
+  "prenom": "Jean-Pierre"
+}
+
+### Supprimer un utilisateur
+DELETE http://localhost:8080/api/utilisateurs/1
+
+### Rechercher des utilisateurs par nom
+GET http://localhost:8080/api/utilisateurs/search?nom=Dupont
+
+
+
+
+# Création d'un exemplaire
+
+### Exemplaire 1
+POST http://localhost:8080/api/exemplaires
+Content-Type: application/json
+
+{
+  "id": 1,
+  "etat": "NEUF",
+  "disponible": true,
+  "livreId": 1
+}
