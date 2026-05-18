@@ -116,3 +116,15 @@ Content-Type: application/json
   "disponible": true,
   "livreId": 1
 }
+
+
+# Création d'un emprunt.
+
+### Emprunt 1
+POST http://localhost:8080/api/emprunts
+Content-Type: application/json
+
+{
+  "utilisateurId": 1,
+  "exemplaireId": 1
+}
